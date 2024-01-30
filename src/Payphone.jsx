@@ -10,7 +10,7 @@ const Payphone = () => {
         "amount": 100,
         "amountWithoutTax": 100,
         "currency": "USD",
-        "clientTransactionId": "PRUEBAS029",//este siempre se debe incrementar
+        "clientTransactionId": "PRUEBAS030",//este siempre se debe incrementar
         "lang": "es",
         "responseUrl": window.location.href,
         "cancellationUrl": window.location.href
@@ -56,29 +56,33 @@ const Payphone = () => {
 
 
     const onClick = () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const transaccion = urlParams.get('id');
-        const client = urlParams.get('clientTransactionId');
-        console.log(transaccion);
-        console.log(client);
-        // Realizar la solicitud con axios
-        axios.post('https://pay.payphonetodoesposible.com/api/button/Prepare', jsonData, {
+
+
+        const url = `https://pay.payphonetodoesposible.com/api/button/Prepare`;
+
+        console.log("url" + url);
+
+        // Aquí puedes enviar el canvasImageURL a tu API para guardar la imagen en el servidor
+        // Ejemplo de cómo hacer una solicitud a la API (requiere biblioteca "axios"):
+        axios.post(url, jsonData, {
             headers: {
                 'Authorization': `Bearer ${authToken}`
             }
         })
             .then((response) => {
-                // Manejar la respuesta aquí, response.data contiene la respuesta JSON
-                console.log(response.data);
-                console.log(response.data.transactionStatus);
-                // setDataId(response.data.transactionStatus);
-                // dispatch( startNewSubscription() );
+                const payWithCardUrl = response.data.payWithCard;
+
+                // Redirigir al usuario a la URL de redirección
+                window.location.href = payWithCardUrl;
+                alert("Boton de pago");
+                console.log('Imagen guardada con éxito en el servidor.');
+                dispatch( startNewSubscription() );
+
             })
             .catch((error) => {
-                // Manejar errores aquí
-                console.error('Error en la solicitud:', error);
-            });
+                console.error('Error al guardar la imagen en el servidor.', error);
 
+            });
 
     }
 
