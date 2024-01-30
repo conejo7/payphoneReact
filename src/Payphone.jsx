@@ -1,7 +1,6 @@
 import {IconButton} from "@mui/material";
 import axios from "axios";
-import {useState} from "react";
-import {useParams} from "react-router-dom";
+
 
 
 const Payphone = () => {
@@ -32,14 +31,8 @@ const Payphone = () => {
         console.log(transaccion);
         console.log(client);
 
-        // Preparar el objeto de datos JSON
-        // const data = {
-        //     id: parseInt(transaccion, 10),
-        //     clientTxId: client,
-        // };
-
         // Realizar la solicitud con axios
-        axios.post('https://pay.payphonetodoesposible.com/api/button/V2/Confirm', jsonData, {
+        axios.post('https://pay.payphonetodoesposible.com/api/button/Prepare', jsonData, {
             headers: {
                 'Authorization': `Bearer ${authToken}`
             }
@@ -61,6 +54,8 @@ const Payphone = () => {
 
     return (
         <div>
+
+            <div id="pp-button"></div>
             <IconButton
                 onClick={onClick}
                 size='large'
