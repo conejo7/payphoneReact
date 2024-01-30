@@ -17,7 +17,7 @@ const Payphone = () => {
     };
     // const {id, clientTransactionId} = useParams();
     // const urlConfirm = `https://pay.payphonetodoesposible.com/api/button/V2/Confirm`;
-    const authToken = "8dDl8Kac7004pWWn0cgPwyznqOvNZ_fEzdDCWYnXHQZT3bJglNZjqsxmaEovFa1P2rxcjSZH2ydqS8YdjCUg1RgQJsT8YKzGQD9VthPvWEWop3rQZau1U8hAB3gg_OJm88qx3B-BByZIMqnlYY6sfPso4WdWGJ4VVuZfS6MQeiDyMYMfZdNZcX0-YFp3GkNtC-sqKlz5-yOHt2hModyUxh_A7TQjP0bTynN6ryg32OrJM-AheTs6LxB8CM9x0gf3T08Csu2rFe3a3152CZ57ImVIuAKxjAwDt1MWHaZJ06lcK6kuxmQgAUvI1IU7MX8VLEMKFg";
+    const authToken = "zp2hBfw6R8EVypUHlBLOffNZKYFWdTxB8XCvOIAEN0TXqEonb71p14PD5PgNwWka4Rjex_tqteF_LnhvdXW1cz639OQMDQPigu7VQuYdx_PPC06NnsJI4lKp3g5f45zPTYGNvfNJiOCDooY2Lruwa3-oA2eAGatBWuqq0_IETWg_XHkQmCTO1Sx1xgPGqIE_1hDWokkscokCN2RVuarhd1NVO2FZA1WmSsIYXo80mRlGb1vtEQyxwzhCNuyuoG_T2DXTh4j7H0dIW9z3AQ0-jShfFlWFJBTTHZRujiTxj3VsSnMkZ-8JXqALzXdEx4SRyGFONw";
     // const [dataId, setDataId] = useState('');
 
 
