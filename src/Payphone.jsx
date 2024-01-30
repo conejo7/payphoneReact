@@ -10,7 +10,7 @@ const Payphone = () => {
         "amount": 100,
         "amountWithoutTax": 100,
         "currency": "USD",
-        "clientTransactionId": "PRUEBAS028",//este siempre se debe incrementar
+        "clientTransactionId": "PRUEBAS029",//este siempre se debe incrementar
         "lang": "es",
         "responseUrl": window.location.href,
         "cancellationUrl": window.location.href
